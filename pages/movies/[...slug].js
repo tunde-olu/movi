@@ -1,20 +1,16 @@
-import {getAuth} from 'firebase/auth';
 import {collection, getDocs} from 'firebase/firestore';
 import Error from 'next/error';
 import Head from 'next/head';
-import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Nav from '../../components/Nav';
 import SingleMovie from '../../components/SingleMovie';
-import {auth, db} from '../../firebase';
+import {db} from '../../firebase';
 
 const SingleMoviePage = (props) => {
   const {movieData, preFetchedLikes} = props;
   const [movieNotFound, setMovieNotFound] = useState(false);
-
-  const router = useRouter();
 
   useEffect(() => {
     if (movieData?.status_code === 34) {
@@ -29,6 +25,7 @@ const SingleMoviePage = (props) => {
     <>
       <Head>
         <title>{movieData.title && movieData.original_title}</title>
+        <meta name='description' content={movieData?.overview} />
       </Head>
       <Header />
       <Nav />

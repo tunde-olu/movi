@@ -1,4 +1,5 @@
 import {onAuthStateChanged, signInWithPopup} from 'firebase/auth';
+import Head from 'next/head';
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 import Footer from '../components/Footer';
@@ -37,6 +38,9 @@ const LoginPage = () => {
 
   return (
     <div>
+      <Head>
+        <title>Login to Movi</title>
+      </Head>
       <Header />
       <Nav />
       <div className='min-h-[60vh]'>

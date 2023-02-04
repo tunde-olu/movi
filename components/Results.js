@@ -158,7 +158,7 @@ const Results = ({serverData: newServerData}) => {
           <>
             {data.length !== 0 && (
               <>
-                <div className='p-5 xl:px-10 mx-auto my-10 sm:grid  3xl:grid-cols-5 max-w-[2000px] justify-center  w-fit space-y-5 sm:space-y-0  grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-8'>
+                <div className='p-5 xl:px-10 mx-auto my-10 grid  3xl:grid-cols-5 max-w-[2000px] justify-center  w-fit space-y-5 sm:space-y-0  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-8'>
                   {data.map((result, index) => {
                     let editedID = `${result.id}${index}${result.original_name}`;
                     editedID = String(editedID);

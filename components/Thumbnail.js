@@ -46,9 +46,9 @@ const Thumbnail = (props) => {
     <XyzTransition
       appearVisible
       xyz='fade up small delay-1 out-down out-rotate-right'
-      className='shadow-lg  shadow-black bg-[#222636] rounded-xl  flex-grow-0'>
+      className='shadow-lg  shadow-black bg-[#222636] rounded-xl'>
       <div
-        className='group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50  w-full max-w-[400px] md:max-w-[350px] 3xl:max-w-[300px] relative'
+        className='group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50  w-full max-w-[400px] md:max-w-[350px] 3xl:max-w-[300px] '
         onClick={linkToSingleMovie}>
         <div className='w-full h-[480px] sm:h-[400px] relative'>
           <Image
@@ -59,7 +59,7 @@ const Thumbnail = (props) => {
           (max-width: 1200px) 50vw,
           33vw'
             alt={title || original_name || original_title}
-            className='w-full h-full rounded-lg rounded-b-none bg-[#111] outline-none border-none shadow-none'
+            className=' rounded-lg rounded-b-none bg-[#111] outline-none border-none shadow-none'
           />
         </div>
         <div className='p-2'>

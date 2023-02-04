@@ -17,9 +17,9 @@ const LikedMovie = (props) => {
   const time = new Date(timestamp).getFullYear();
 
   return (
-    <div className='group flex items-stretch justify-between space-x-2 bg-[#ababba] text-black hover:text-white max-w-sm hover:bg-[#222] hover:scale-110 transition-all duration-1000 p-2 rounded-xl shadow-md shadow-gray-900'>
-      <div className='relative rounded-full w-1/3 max-w-[200px] h-[180px]'>
-        <Image src={image} alt={title} fill className='rounded-lg' />
+    <div className='group flex  justify-between space-x-2 bg-[#ababba] text-black hover:text-white max-w-sm hover:bg-[#222] hover:scale-105 md:hover:scale-110 transition-all duration-1000 p-2 rounded-xl shadow-md shadow-gray-900'>
+      <div className='relative rounded-full w-1/3 max-w-[300px] h-[180px]'>
+        <Image priority src={image} alt={title} fill className='rounded-lg' />
       </div>
 
       <div className='flex-1'>

@@ -63,6 +63,7 @@ const WishListMovies = (props) => {
     <div className='px-2'>
       <div className='flex flex-col items-center justify-center space-y-5 my-16'>
         <Image
+          priority
           src={user?.photoURL}
           width={480}
           height={480}
@@ -98,7 +99,7 @@ const WishListMovies = (props) => {
               ))}
           </div>
           {likes.length > 0 ? (
-            <div className='grid gap-10 wishlist-grid max-w-screen-xl px-10 mx-auto justify-center my-20  items-center py-4'>
+            <div className='grid gap-10 wishlist-grid max-w-screen-xl px-3 md:px-5 mx-auto justify-center my-20  items-center py-4'>
               {likes.map((movie) => (
                 <LikedMovie {...movie} key={movie.id} deleteLikedMovie={deleteLikedMovie} />
               ))}

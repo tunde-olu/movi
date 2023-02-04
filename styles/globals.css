@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#111] text-gray-200 overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .animation-delay-1 {
+    animation-delay: 1ms;
+  }
+  .clickBtn {
+    @apply bg-black px-6 py-2 rounded-lg tracking-widest text-base;
+  }
+}
+
+@layer components {
+  .text-shadow {
+    text-shadow: -5px 2px 3px rgba(235, 234, 230, 0.29), 5px 4px 7px rgba(236, 235, 242, 0.35);
+  }
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+    overflow-x: auto;
+  }
+  @media (max-width: 725px) {
+    .wishlist-grid {
+      grid-template-columns: minmax(290px, 350px);
+    }
+  }
+  .thumb-year {
+    display: block;
+  }
+
+  @media (hover: hover) {
+    .thumb-year {
+      display: none;
+    }
+  }
+  @media (hover: none) {
+    .movie-details {
+      display: none;
+    }
+  }
+}
